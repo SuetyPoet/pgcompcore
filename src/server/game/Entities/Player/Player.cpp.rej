@@ -1,0 +1,67 @@
+--- src/server/game/Entities/Player/Player.cpp
++++ src/server/game/Entities/Player/Player.cpp
+@@ -81,7 +81,31 @@
+ #include "WorldPacket.h"
+ #include "WorldSession.h"
+ #include "GameObjectAI.h"
+-
++#include "Config.h"
++// Prepatch by LordPsyan
++// 61
++// 62
++// 63
++// 64
++// 65
++// 66
++// 67
++// 68
++// 69
++// 70
++// 71
++// 72
++// 73
++// 74
++// 75
++// 76
++// 77
++// 78
++// 79
++// 80
++// Visit http://www.realmsofwarcraft.com/bb for forums and information
++//
++// End of prepatch
+ #define ZONE_UPDATE_INTERVAL (1*IN_MILLISECONDS)
+ 
+ #define PLAYER_SKILL_INDEX(x)       (PLAYER_SKILL_INFO_1_1 + ((x)*3))
+@@ -15026,7 +15121,30 @@ void Player::RewardQuest(Quest const* quest, uint32 reward, Object* questGiver,
+     Unit::AuraEffectList const& ModXPPctAuras = GetAuraEffectsByType(SPELL_AURA_MOD_XP_QUEST_PCT);
+     for (Unit::AuraEffectList::const_iterator i = ModXPPctAuras.begin(); i != ModXPPctAuras.end(); ++i)
+         AddPct(XP, (*i)->GetAmount());
+-
++    // Prepatch by LordPsyan
++    // 41
++    // 42
++    // 43
++    // 44
++    // 45
++    // 46
++    // 47
++    // 48
++    // 49
++    // 50
++    // 51
++    // 52
++    // 53
++    // 54
++    // 55
++    // 56
++    // 57
++    // 58
++    // 59
++    // 60
++    // Visit http://www.realmsofwarcraft.com/bb for forums and information
++    //
++    // End of prepatch
+     int32 moneyRew = 0;
+     if (getLevel() < sWorld->getIntConfig(CONFIG_MAX_PLAYER_LEVEL))
+         GiveXP(XP, nullptr);
